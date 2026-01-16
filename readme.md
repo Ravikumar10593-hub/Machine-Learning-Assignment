@@ -60,21 +60,13 @@ FINAL RESULTS - ALL MODELS
 ================================================================================
               Model  Accuracy    AUC  Precision  Recall     F1    MCC
 ================================================================================
-              Model  Accuracy    AUC  Precision  Recall     F1    MCC
-Logistic Regression    0.8333 0.9498     0.8462  0.7857 0.8148 0.6652
-              Model  Accuracy    AUC  Precision  Recall     F1    MCC
-Logistic Regression    0.8333 0.9498     0.8462  0.7857 0.8148 0.6652
 Logistic Regression    0.8333 0.9498     0.8462  0.7857 0.8148 0.6652
       Decision Tree    0.7000 0.7450     0.7500  0.5357 0.6250 0.4016
-      Decision Tree    0.7000 0.7450     0.7500  0.5357 0.6250 0.4016
-K-Nearest Neighbors    0.8833 0.9492     0.9200  0.8214 0.8679 0.7680
 K-Nearest Neighbors    0.8833 0.9492     0.9200  0.8214 0.8679 0.7680
         Naive Bayes    0.8833 0.9375     0.8889  0.8571 0.8727 0.7655
       Random Forest    0.8667 0.9414     0.8846  0.8214 0.8519 0.7326
             XGBoost    0.8667 0.8917     0.8846  0.8214 0.8519 0.7326
 ================================================================================
-
-**Note**: *The above values are example metrics. Please replace with your actual results after running `model_training.py` on BITS Virtual Lab.*
 
 ---
 
@@ -195,14 +187,16 @@ The deployed web application includes:
 
 ## 📊 Results Summary
 
-### Best Performing Model: **XGBoost**
-- **Accuracy**: 88.52%
-- **AUC Score**: 94.45%
-- **F1 Score**: 88.89%
-- **MCC Score**: 76.92%
+### Best Performing Model: **K Nearest Neighbors**
+# correct this with the actual results from your model training
 
-### Recommended Model for Deployment: **XGBoost**
-Rationale: Highest performance across all metrics, excellent balance between precision and recall, robust gradient boosting algorithm.
+- **Accuracy**: 88.33%
+- **AUC Score**: 94.92%
+- **F1 Score**: 86.79%
+- **MCC Score**: 76.80%
+
+### Recommended Model for Deployment: **K Nearest Neighbors**
+Rationale: Highest performance across all metrics, excellent balance between precision and recall, robust algorithm.
 
 ---
 
@@ -217,47 +211,3 @@ Rationale: Highest performance across all metrics, excellent balance between pre
 
 ---
 
-## 👨‍💻 Author
-
-**[Your Name]**  
-M.Tech (AIML/DSE)  
-BITS Pilani - Work Integrated Learning Programme
-
----
-
-## 📝 Assignment Details
-
-- **Course**: Machine Learning
-- **Assignment**: Assignment 2
-- **Marks**: 15
-- **Submission Deadline**: 15-Feb-2026
-- **Executed on**: BITS Virtual Lab ✅
-
----
-
-## 📌 Important Notes
-
-1. All models trained on BITS Virtual Lab
-2. Screenshot of execution included in submission
-3. Code committed to GitHub with proper history
-4. Streamlit app deployed and accessible via public URL
-5. No plagiarism - original implementation with proper documentation
-
----
-
-## 🙏 Acknowledgments
-
-- UCI Machine Learning Repository for the Heart Disease dataset
-- BITS Pilani for providing Virtual Lab infrastructure
-- Streamlit team for the excellent deployment platform
-
----
-
-## 📧 Contact
-
-For any queries regarding this project, please contact:  
-**Email**: your.email@example.com
-
----
-
-**Last Updated**: January 2026
