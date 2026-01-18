@@ -3,6 +3,7 @@ ML Assignment 2 - Streamlit Web Application
 Heart Disease Classification Dashboard
 """
 
+
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -12,6 +13,7 @@ from sklearn.metrics import (accuracy_score, roc_auc_score, precision_score,
                             confusion_matrix, classification_report)
 import matplotlib.pyplot as plt
 import seaborn as sns
+import requests
 
 # Page configuration
 st.set_page_config(
@@ -37,6 +39,33 @@ st.markdown("""
 
 # Title
 st.title("❤️ Heart Disease Classification System")
+
+# Download button for test_data.csv
+@st.cache_data(show_spinner=False)
+def get_test_csv():
+    url = "https://raw.githubusercontent.com/Ravikumar10593-hub/Machine-Learning-Assignment/main/test_data.csv"
+    response = requests.get(url)
+    if response.status_code == 200:
+        return response.content
+    else:
+        return None
+
+st.markdown("""
+<h4>⬇️ Download Sample Test Data</h4>
+<p>
+    You can download a sample <b>test_data.csv</b> file to try out the dashboard.
+</p>
+""", unsafe_allow_html=True)
+csv_bytes = get_test_csv()
+if csv_bytes:
+    st.download_button(
+        label="Download test_data.csv",
+        data=csv_bytes,
+        file_name="test_data.csv",
+        mime="text/csv"
+    )
+else:
+    st.error("Unable to fetch test_data.csv from GitHub.")
 st.markdown("### ML Assignment 2 - Multi-Model Comparison Dashboard")
 st.markdown("---")
 
